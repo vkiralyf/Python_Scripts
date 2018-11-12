@@ -35,22 +35,7 @@ def deviationcalc(qw, qe, qr,invrt,prjtname,link):
             template_file_content = template_file.read()
             template_file.close()
         ######E-Mail Notificaiton Setup############
-        my_address = 'victor.kiralyfalvy@abundantsolarenergy.com'
-        password = '8Abundant5'
-        toaddr = 'victor.kiralyfalvy@abundantsolarenergy.com'
-        msg = MIMEMultipart()
-        msg['From'] = my_address
-        msg['To'] = toaddr
-        msg['Subject'] = "Inverter Alert"
-        body = template_file_content
-        msg.attach(MIMEText(body, 'plain'))
-        server = smtplib.SMTP('smtp.office365.com', 587)
-        server.starttls()
-        server.login(my_address, password)
-        text = msg.as_string()
-        server.sendmail(my_address, toaddr, text)
-        server.quit()
-        ##############################################
+      
     else:
         print("There is no significant deviation in the Voltage Value 2")
     if float(n3) >= newval or float(n3) < newvalb:
@@ -63,22 +48,7 @@ def deviationcalc(qw, qe, qr,invrt,prjtname,link):
             template_file_content = template_file.read()
             template_file.close()
         ######E-Mail Notificaiton Setup############
-        my_address = 'victor.kiralyfalvy@abundantsolarenergy.com'
-        password = '8Abundant5'
-        toaddr = 'victor.kiralyfalvy@abundantsolarenergy.com'
-        msg = MIMEMultipart()
-        msg['From'] = my_address
-        msg['To'] = toaddr
-        msg['Subject'] = "Inverter Alert"
-        body = template_file_content
-        msg.attach(MIMEText(body, 'plain'))
-        server = smtplib.SMTP('smtp.office365.com', 587)
-        server.starttls()
-        server.login(my_address, password)
-        text = msg.as_string()
-        server.sendmail(my_address, toaddr, text)
-        server.quit()
-        ##############################################
+       
     else:
         print("There is no significant deviation in the Voltage Value 3")
     u = qe[0].strip('A')
@@ -98,22 +68,7 @@ def deviationcalc(qw, qe, qr,invrt,prjtname,link):
             template_file_content = template_file.read()
             template_file.close()
         ######E-Mail Notificaiton Setup############
-        my_address = 'victor.kiralyfalvy@abundantsolarenergy.com'
-        password = '8Abundant5'
-        toaddr = 'victor.kiralyfalvy@abundantsolarenergy.com'
-        msg = MIMEMultipart()
-        msg['From'] = my_address
-        msg['To'] = toaddr
-        msg['Subject'] = "Inverter Alert"
-        body = template_file_content
-        msg.attach(MIMEText(body, 'plain'))
-        server = smtplib.SMTP('smtp.office365.com', 587)
-        server.starttls()
-        server.login(my_address, password)
-        text = msg.as_string()
-        server.sendmail(my_address, toaddr, text)
-        server.quit()
-        ##############################################
+   
     else :
         print("There is no significant deviation in the Amparage Value 2")
     if float(u2) >= newvala or float(u2) < newvalc:
@@ -127,22 +82,7 @@ def deviationcalc(qw, qe, qr,invrt,prjtname,link):
             template_file_content = template_file.read()
             template_file.close()
         ######E-Mail Notificaiton Setup############
-        my_address = 'victor.kiralyfalvy@abundantsolarenergy.com'
-        password = '8Abundant5'
-        toaddr = 'victor.kiralyfalvy@abundantsolarenergy.com'
-        msg = MIMEMultipart()
-        msg['From'] = my_address
-        msg['To'] = toaddr
-        msg['Subject'] = "Inverter Alert"
-        body = template_file_content
-        msg.attach(MIMEText(body, 'plain'))
-        server = smtplib.SMTP('smtp.office365.com', 587)
-        server.starttls()
-        server.login(my_address, password)
-        text = msg.as_string()
-        server.sendmail(my_address, toaddr, text)
-        server.quit()
-        ##############################################
+       
     else:
         print("There is no significant deviation in the Amparage Value 3")
     print("This is the current power list " + str(qr))
@@ -161,22 +101,7 @@ def deviationcalc(qw, qe, qr,invrt,prjtname,link):
                 template_file_content = template_file.read()
                 template_file.close()
             ######E-Mail Notificaiton Setup############
-            my_address = 'victor.kiralyfalvy@abundantsolarenergy.com'
-            password = '8Abundant5'
-            toaddr = 'victor.kiralyfalvy@abundantsolarenergy.com'
-            msg = MIMEMultipart()
-            msg['From'] = my_address
-            msg['To'] = toaddr
-            msg['Subject'] = "Inverter Alert"
-            body = template_file_content
-            msg.attach(MIMEText(body, 'plain'))
-            server = smtplib.SMTP('smtp.office365.com', 587)
-            server.starttls()
-            server.login(my_address, password)
-            text = msg.as_string()
-            server.sendmail(my_address, toaddr, text)
-            server.quit()
-            ##############################################
+          
 
         else:
             print("No Deviation Everything is Normal!")
@@ -196,22 +121,7 @@ def deviationcalc(qw, qe, qr,invrt,prjtname,link):
                     template_file_content = template_file.read()
                     template_file.close()
                 ######E-Mail Notificaiton Setup############
-                my_address = 'victor.kiralyfalvy@abundantsolarenergy.com'
-                password = '8Abundant5'
-                toaddr = 'victor.kiralyfalvy@abundantsolarenergy.com'
-                msg = MIMEMultipart()
-                msg['From'] = my_address
-                msg['To'] = toaddr
-                msg['Subject'] = "Inverter Alert"
-                body = template_file_content
-                msg.attach(MIMEText(body, 'plain'))
-                server = smtplib.SMTP('smtp.office365.com', 587)
-                server.starttls()
-                server.login(my_address, password)
-                text = msg.as_string()
-                server.sendmail(my_address, toaddr, text)
-                server.quit()
-                ##############################################
+               
             else :
                 print("There is no significant deviation in the Current Power")
 def Fronius(p, sid, d, psa, psv):
